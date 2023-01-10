@@ -15,14 +15,14 @@ if (close) {
 }
 
 // for changing images 
-var MainImg = document.getElementById("MainImg");
-var smallimg = document.getElementsByClassName("small-img");
-const arrayofsmallimg = Array.from(smallimg);
-arrayofsmallimg.forEach(img => {
-    img.addEventListener("click", function () {
-        MainImg.src = img.src;
-    });
-});
+// var MainImg = document.getElementById("MainImg");
+// var smallimg = document.getElementsByClassName("small-img");
+// const arrayofsmallimg = Array.from(smallimg);
+// arrayofsmallimg.forEach(img => {
+//     img.addEventListener("click", function () {
+//         MainImg.src = img.src;
+//     });
+// });
 
 
 var pimages = document.getElementsByClassName("imgs");
@@ -37,13 +37,36 @@ arrayofpimages.forEach(img => {
         }
 
         localStorage.setItem('currentProduct', JSON.stringify(dataToPass));
-
         location.href = "sproduct.html";    // redirecting to the sproduct page
+    });
+});
 
-        // Ssrc=img.src;
-        // var httpRequest = new XMLHttpRequest();
-        // httpRequest.open("GET","file:///C:/Users/admin/Documents/Desktop/e-commerce-website/website/sproduct.html");
-        // httpRequest.send(Ssrc);
-        //  MainImg.src=Ssrc;
+
+// checking if add to cart button is clicked.
+var cart=document.getElementsByClassName("cart");
+const arrayofcart= Array.from(cart);
+arrayofcart.forEach(product=>{
+    product.addEventListener("click",function(e){
+        let dataToPass= {
+            product_src : product.parentElement.parentElement.children[0].src,
+            product_title : product.parentElement.parentElement.children[1].children[1].innerText,
+            product_price : product.parentElement.parentElement.children[1].children[3].innerText
+               }
+        localStorage.setItem('addedProduct',JSON.stringify(dataToPass));
+        location.href = "cart.html";
+        
+        // let xhr = new XMLHttpRequest();
+        // xhr.open("POST","cart.html", true);
+        // xhr.onload = ()=>{
+        //     if (xhr.responseText.slice(-2)!=="OK") {
+        //         console.log("error");
+        //     } else {
+        //         console.log("Okay");
+        //     }
+        // };
+        // xhr.send();
+
+        // e.preventDefault();
+      
     });
 });
