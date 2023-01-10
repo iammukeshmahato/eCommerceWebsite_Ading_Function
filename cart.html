@@ -39,6 +39,83 @@
 
     </section>
 
+    <section id="product1" class="section-p1">
+        <h2>New Arrivals</h2>
+        <p>Summer Collection New Modern Design</p>
+
+        <div class="pro-container">
+            <div class="pro">
+                <img src="img/shop1/3.jpg"class="imgs">
+                <div class="dis">
+                    <span>addidas</span>
+                    <h5> Watch</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$69</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart">
+                    </i></a>
+            </div>
+            <div class="pro">
+                <img src="img/shoes/5.jpg" class="imgs">
+                <div class="dis">
+                    <span>addidas</span>
+                    <h5>Designer Shoes</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$68</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart">
+                    </i></a>
+            </div>
+            <div class="pro">
+                <img src="img/clothes/3.jpg" class="imgs">
+                <div class="dis">
+                    <span>addidas</span>
+                    <h5>Eye design shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$64</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart">
+                    </i></a>
+            </div>
+            <div class="pro">
+                <img src="img/clothes/2.jpg"class="imgs">
+                <div class="dis">
+                    <span>addidas</span>
+                    <h5>Designer White Dress </h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$87</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart">
+                    </i></a>
+            </div>
+        </div>
+    </section>
+
+
     <section id="cart"class="section-p1">
         <table width="100%">
             <thead>
@@ -51,25 +128,9 @@
                     <td>SubTotal</td>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="tbody">
                 <tr>
-                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
-                    <td><img src="img/shop1/26.jpg"></td>
-                    <td>Dark Green T-shirt</td>
-                    <td>$65</td>
-                    <td><input type="number" value="1"min="1"></td>
-                    <td>$65</td>
-                </tr>
-                <tr>
-                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
-                    <td><img src="img/shop1/6.jpg"></td>
-                    <td>Red Hoodie</td>
-                    <td>$84</td>
-                    <td><input type="number" value="1"min="1"></td>
-                    <td>$84</td>
-                </tr>
-                <tr>
-                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><i class="far fa-times-circle delete"></i></td>
                     <td><img src="img/shop1/17.jpg"></td>
                     <td>Classy Jacket</td>
                     <td>$92</td>
@@ -94,7 +155,7 @@
             <table>
                 <tr>
                     <td>Cart SubTotal</td>
-                    <td>$65</td>
+                    <td class="cardTotals">$65</td>
                 </tr>
                 <tr>
                     <td>Shipping</td>
@@ -102,7 +163,7 @@
                 </tr>
                 <tr>
                     <td><strong>Total</strong></td>
-                    <td><strong>$241</strong></td>
+                    <td style="font-weight: bold;" class="cardTotals">$65</td>
                 </tr>
             </table>
             <button class="normal">Proceed to checkout</button>
@@ -172,6 +233,10 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="updateProductDetails.js"></script>
+    <script src="updateTable.js"></script>
 </body>
+
+
 
 </html>
